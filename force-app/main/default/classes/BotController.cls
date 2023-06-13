@@ -35,6 +35,7 @@ public with sharing class BotController {
         String fileName,
         String fileContent
     ) {
+        String gender = 'male';
         try {
             if (session != null) {
                 String nextCommand = session.get('nextCommand');
