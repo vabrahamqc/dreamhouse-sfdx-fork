@@ -20,14 +20,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
       - name: Quality Clouds Scan
         # You may pin to the exact commit or the version.
         # uses: qualityclouds/action-full-scan@b6139e614387852d33c82662289697c90b1c1fab
         uses: qualityclouds/action-full-scan@1.0.1
         with:
           mode: cloud
-          token: ${{ secrets.QC_TOKEN_DEV }}
+          token: ${{ secrets.QC_TOKEN }}
           version: latest
